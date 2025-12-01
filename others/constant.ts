@@ -1,4 +1,4 @@
-import { TBaseDetails, TMenuItems } from "./types";
+import { TBaseDetails, TMenuItems, TProduct } from "./types";
 
 export const navItemsEn = [
   {
@@ -231,4 +231,59 @@ export const baseItemsAr: TBaseDetails[] = [
     des: "معجنات طازجة بنكهة خفيفة ومذاق محبّب للجميع.",
     img: "/assets/base-details/pastry.png",
   },
+];
+
+export const productItemsEn: TProduct[] = [
+  {
+    id: 1,
+    title: "American Coffee",
+    price: "9.0",
+  },
+  {
+    id: 2,
+    title: "Cost Rica Light",
+    price: "9.0",
+  },
+  {
+    id: 3,
+    title: "Jamaican Mountain",
+    price: "9.0",
+  },
+  {
+    id: 4,
+    title: "Ethopian Fancy",
+    price: "9.0",
+  },
+];
+
+export const productItemsAr: TProduct[] = [
+  {
+    id: 1,
+    title: "القهوة الأمريكية",
+    price: "9.0",
+  },
+  {
+    id: 2,
+    title: "كوستا ريكا الخفيفة",
+    price: "9.0",
+  },
+  {
+    id: 3,
+    title: "جبل الجامايكي",
+    price: "9.0",
+  },
+  {
+    id: 4,
+    title: "أثيوبيا الفاخرة",
+    price: "9.0",
+  },
+];
+
+export const galleryItems = [
+  "/assets/footer/g1.jpg",
+  "/assets/footer/g2.jpg",
+  "/assets/footer/g3.jpg",
+  "/assets/footer/g4.jpg",
+  "/assets/footer/g5.jpg",
+  "/assets/footer/g6.jpg",
 ];

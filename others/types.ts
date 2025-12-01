@@ -22,3 +22,10 @@ export type TBaseDetails = {
   des: string;
   img: string;
 };
+
+
+export type TProduct = {
+  id: number;
+  title: string;
+  price: string;
+};

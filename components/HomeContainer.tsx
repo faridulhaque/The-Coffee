@@ -7,6 +7,12 @@ import About from "./About";
 import Menu from "./Menu";
 import BaseBanner from "./BaseBanner";
 import BaseDetails from "./BaseDetails";
+import Products from "./Products";
+import Dealer from "./Dealer";
+import FooterTop from "./FooterTop";
+import FooterBottom from "./FooterBottom";
+import FooterMid from "./FooterMid";
+import ContactUs from "./ContactUs";
 
 function HomeContainer() {
   const [showScroll, setShowScroll] = useState(false);
@@ -40,9 +46,16 @@ function HomeContainer() {
         <Menu></Menu>
         <BaseBanner></BaseBanner>
         <BaseDetails></BaseDetails>
+        <Products></Products>
+        <Dealer></Dealer>
+        <ContactUs></ContactUs>
       </section>
       {/* footer tag's and the image inside it have styles in the global css file  */}
-      <footer className="footer"></footer>
+      <footer className="footer">
+        <FooterTop></FooterTop>
+        <FooterMid></FooterMid>
+        <FooterBottom></FooterBottom>
+      </footer>
 
       {/* <span
         onClick={() => {
