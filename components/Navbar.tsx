@@ -1,23 +1,30 @@
 "use client";
 import Link from "next/link";
 import Image from "next/image";
-import { useContext, useState } from "react";
-import { useRouter } from "next/navigation";
+import { useContext, useEffect, useState } from "react";
 import { navItemsAr, navItemsEn } from "@/others/constant";
 import styles from "@/styles/header/Navbar.module.css";
+import { GlobalContext } from "@/app/layout";
+import { TNavItem } from "@/others/types";
+import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 
 function Navbar() {
-  //   const { toggleLanguageData } = useContext(GlobalContext);
-  //   const { language, toggleLanguage } = toggleLanguageData;
+  const value = useContext(GlobalContext);
+  const { language, toggleLanguage } = value;
 
   const [openDrawer, setOpenDrawer] = useState(false);
-  const router = useRouter();
 
-  const language = "ENGLISH";
-  console.log("navbar");
+  const items = language === "ARABIC" ? navItemsAr : navItemsEn;
 
-  const items = language === "ENGLISH" ? navItemsEn : navItemsAr;
-  console.log("items", items);
+  useEffect(() => {
+    const bodyElement = document.body;
+    if (openDrawer) {
+      bodyElement.className = "onDrawerOpen";
+    } else {
+      bodyElement.className = "";
+    }
+  }, [openDrawer]);
+
   return (
     <div className={styles.navbar}>
       {/* navbar for larger devices started*/}
@@ -70,7 +77,7 @@ function Navbar() {
           </li>
         </ul>
         <ul>
-          {items.map((item: { link: string; title: string }) => (
+          {items.map((item: TNavItem) => (
             <li key={item.title}>
               <Link href={item.link}>{item.title}</Link>
             </li>
@@ -83,10 +90,7 @@ function Navbar() {
             ></BsFillCartFill> */}
           </li>
           <li>
-            <button
-              // onClick={toggleLanguage}
-              className="pointer"
-            >
+            <button onClick={toggleLanguage} className="pointer">
               {language !== "ENGLISH"
                 ? "Switch to English"
                 : "التحوّل إلى العربية"}
@@ -97,7 +101,59 @@ function Navbar() {
       {/* navbar for larger devices ended*/}
       {/* -------------------------------- */}
       {/* navbar for smaller devices started*/}
-      <nav></nav>
+      <nav>
+        <Image
+          width={200}
+          height={60}
+          className={styles.iconImage}
+          src="/assets/header/logo.png"
+          alt="logo"
+        />
+        <span>
+          {/* <BsFillCartFill
+            className={`${styles.cartIconDrawer}`}
+          ></BsFillCartFill> */}
+          {openDrawer ? (
+            <AiOutlineClose
+              onClick={() => setOpenDrawer(!openDrawer)}
+              className={styles.iconCloser}
+            ></AiOutlineClose>
+          ) : (
+            <AiOutlineMenu
+              onClick={() => setOpenDrawer(!openDrawer)}
+              className={styles.iconMenu}
+            ></AiOutlineMenu>
+          )}
+        </span>
+
+        <ul
+          className={`${styles.navbarDrawer} ${
+            openDrawer ? styles.openDrawer : styles.closeDrawer
+          }`}
+        >
+          <li>
+            <button onClick={toggleLanguage} className="pointer">
+              {language !== "ENGLISH"
+                ? "Switch to English"
+                : "التحوّل إلى العربية"}
+            </button>
+          </li>
+          {language === "ENGLISH"
+            ? items.map((item: TNavItem) => (
+                <li key={item.title}>
+                  <Link href={item.link}>{item.title}</Link>
+                </li>
+              ))
+            : items
+                .slice()
+                .reverse()
+                .map((item: TNavItem) => (
+                  <li key={item.title}>
+                    <Link href={item.link}>{item.title}</Link>
+                  </li>
+                ))}
+        </ul>
+      </nav>
       {/* navbar for smaller devices ended*/}
     </div>
   );

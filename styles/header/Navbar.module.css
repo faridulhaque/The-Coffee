@@ -3,7 +3,7 @@
   display: flex;
   background-color: white;
   width: 100%;
-  height: 90px;
+  height: 88px;
   align-items: center;
   z-index: 200;
 }
@@ -11,9 +11,9 @@
 .whiteCoffee {
   position: absolute;
   color: white;
-  top: 90px;
-  width: 399pt;
-  height: 100pt;
+  top: 88px;
+  width: 340pt;
+  height: 90pt;
   z-index: 100;
 }
 
@@ -21,7 +21,7 @@
 .navbar nav:first-of-type ul:nth-child(3) {
   display: flex;
   align-items: center;
-  width: 25%;
+  width: 23%;
   height: 100%;
 }
 
@@ -38,13 +38,13 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 50%;
+  width: 54%;
   height: 100%;
 }
 
 .navbar nav:first-of-type ul:nth-child(even) a {
-  font-size: 1.75em;
-  font-weight: 200;
+  font-size: 1.6em;
+  font-weight: 300;
 }
 
 .navbar nav:first-of-type ul:nth-child(even) a:hover {
@@ -52,7 +52,7 @@
 }
 
 .cartIcon {
-  font-size: 2em;
+  font-size: 1.9em;
 }
 
 .navbar nav:first-of-type button {
@@ -60,10 +60,10 @@
   margin-top: 0;
   outline: none;
   border-radius: 25px;
-  padding: 12.5px 20px;
+  padding: 12px 18px;
   border: none;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.35em;
 }
 
 /* navbar for smaller devices */
@@ -73,29 +73,31 @@
 
 @media only screen and (min-width: 960px) and (max-width: 1279px) {
   .navbar nav:first-of-type {
-    height: 75px;
+    height: 80px;
   }
 
   .whiteCoffee {
-    top: 75px;
+    top: 80px;
+    width: 310pt;
+    height: 80pt;
   }
 
   .navbar nav:first-of-type ul:nth-child(even) a {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .iconImage {
-    width: 90%;
+    width: 85%;
   }
 
   .cartIcon {
-    font-size: 1.5em;
+    font-size: 1.6em;
   }
 
   .navbar nav:first-of-type button {
-    padding: 10px 17.5px;
+    padding: 10px 16px;
     color: white;
-    font-size: 1.25em;
+    font-size: 1.2em;
   }
 
   /* navbar for smaller devices */
@@ -106,53 +108,53 @@
 
 @media only screen and (min-width: 740px) and (max-width: 959px) {
   .navbar nav:first-of-type {
-    height: 75px;
+    height: 78px;
   }
 
   .whiteCoffee {
-    top: 75px;
-    width: 160pt;
-    height: 50.5pt;
+    top: 78px;
+    width: 150pt;
+    height: 48pt;
     left: 0;
   }
 
   .navbar nav:first-of-type ul:nth-child(even) a {
-    font-size: 1.5em;
+    font-size: 1.3em;
   }
 
   .iconImage {
-    width: 90%;
+    width: 85%;
   }
 
   .cartIcon {
-    font-size: 1.5em;
+    font-size: 1.4em;
   }
 
   .navbar nav:first-of-type button {
-    padding: 10px 17.5px;
+    padding: 9px 15px;
     color: white;
-    font-size: 1.25em;
+    font-size: 1.15em;
   }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 739px) {
   .navbar nav:first-of-type {
-    height: 80px;
+    height: 76px;
   }
 
   .whiteCoffee {
-    top: 80px;
-    width: 160pt;
-    height: 50.5pt;
+    top: 76px;
+    width: 150pt;
+    height: 48pt;
   }
 
   .iconImage {
-    width: 90%;
+    width: 85%;
   }
 
   .navbar nav:first-of-type ul:nth-child(even) a {
-    font-size: 1em;
-    font-weight: 200;
+    font-size: 0.95em;
+    font-weight: 300;
   }
 
   .navbar nav:first-of-type ul:nth-child(even) a:hover {
@@ -160,18 +162,18 @@
   }
 
   .cartIcon {
-    font-size: 1.5em;
+    font-size: 1.35em;
   }
 
   .navbar nav:first-of-type button {
     background-color: #7b3826;
     margin-top: 0;
     outline: none;
-    border-radius: 20px;
-    padding: 6.5px 10px;
+    border-radius: 18px;
+    padding: 6px 10px;
     border: none;
     color: white;
-    font-size: 1em;
+    font-size: 0.95em;
   }
 
   /* navbar for smaller devices */
@@ -189,18 +191,18 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 65px;
+    height: 62px;
     background-color: white;
     position: relative;
   }
 
   .openDrawer {
     width: 100%;
-    height: calc(100vh - 65px);
+    height: calc(100vh - 62px);
     background-color: rgb(39, 30, 26);
     opacity: 0.9;
     position: absolute;
-    top: 60px;
+    top: 58px;
     display: flex;
     flex-direction: column;
     left: 0;
@@ -210,11 +212,11 @@
 
   .closeDrawer {
     width: 100%;
-    height: calc(100vh - 60px);
+    height: calc(100vh - 62px);
     background-color: rgb(39, 30, 26);
     opacity: 0.9;
     position: absolute;
-    top: 60px;
+    top: 58px;
     display: flex;
     flex-direction: column;
     left: -100%;
@@ -223,7 +225,7 @@
   }
 
   .iconImage {
-    width: 40%;
+    width: 38%;
     height: 80%;
     margin-left: 10px;
   }
@@ -231,38 +233,39 @@
   .iconMenu,
   .iconCloser {
     margin-right: 10px;
-    font-size: 2em;
+    font-size: 1.85em;
+    cursor: pointer;
   }
 
   .navbar nav:last-of-type ul li {
     width: 100%;
-    height: 50px;
+    height: 48px;
     margin-top: 10px;
   }
 
   .navbar nav:last-of-type ul li:first-of-type {
-    height: 100px;
+    height: 95px;
     display: flex;
     align-items: center;
     justify-content: space-between;
   }
 
   .navbar nav:last-of-type ul li:first-of-type {
-    height: 100px;
+    height: 95px;
     display: flex;
     align-items: center;
     width: 100%;
   }
 
   .navbar nav:last-of-type ul li:first-of-type button {
-    padding: 10px 17.5px;
+    padding: 9px 16px;
     color: white;
-    font-size: 1.25em;
+    font-size: 1.2em;
     margin-left: 10px;
     background-color: #7b3826;
     outline: none;
     border: none;
-    border-radius: 15px;
+    border-radius: 14px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.05);
   }
 
@@ -276,13 +279,13 @@
 
   .cartIconDrawer {
     color: #7b3826;
-    font-size: 2em;
-    margin-right: 25px;
+    font-size: 1.9em;
+    margin-right: 23px;
   }
 
   .navbar nav:last-of-type ul a {
     margin-left: 5%;
     color: white;
-    font-size: 2em;
+    font-size: 1.9em;
   }
 }
