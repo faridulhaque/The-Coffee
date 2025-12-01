@@ -7,6 +7,7 @@ import styles from "@/styles/header/Navbar.module.css";
 import { GlobalContext } from "@/app/layout";
 import { TNavItem } from "@/others/types";
 import { AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
+import dynamic from "next/dynamic";
 
 function Navbar() {
   const value = useContext(GlobalContext);
@@ -158,5 +159,4 @@ function Navbar() {
     </div>
   );
 }
-
-export default Navbar;
+export default dynamic(() => Promise.resolve(Navbar), { ssr: false });

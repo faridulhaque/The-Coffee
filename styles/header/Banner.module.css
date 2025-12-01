@@ -1,0 +1,175 @@
+/* Styles for large devices go here */
+.banner {
+  width: 100%;
+  height: calc(100vh - 90px);
+  position: relative;
+}
+
+.carouselImage {
+  opacity: 0.05;
+  transition: opacity 1.5s ease-out;
+  object-fit: cover;
+}
+
+.fadeIn {
+  opacity: 1;
+}
+
+.textContainer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 50%;
+  height: 200px;
+  z-index: 99;
+}
+
+.textContainer h2,
+.textContainer p {
+  color: white;
+  text-align: center;
+}
+
+.textContainer p {
+  font-size: 2.6em;
+  margin-top: 22px;
+}
+
+.textContainer h2 {
+  font-size: 4.5em;
+}
+
+.textContainer div {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.textContainer button {
+  background-color: #c09457;
+  margin-top: 0;
+  outline: none;
+  border-radius: 25px;
+  padding: 13px 22px;
+  border: none;
+  color: white;
+  font-size: 1.3em;
+  cursor: pointer;
+}
+
+.textContainer button:hover {
+  background-color: white;
+  color: #c09457;
+  transition: all 0.5s;
+}
+
+.imageBottom {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  bottom: -5px;
+  z-index: 500;
+}
+
+/* Medium devices (desktops) */
+@media only screen and (min-width: 960px) and (max-width: 1279px) {
+  /* Styles for medium devices go here */
+  .banner {
+    height: calc(100vh - 75px);
+  }
+
+  .textContainer p {
+    margin-top: 14px;
+    font-size: 2.2em;
+  }
+
+  .textContainer h2 {
+    font-size: 4em;
+  }
+
+  .imageBottom {
+    bottom: -4px;
+  }
+}
+
+@media only screen and (min-width: 740px) and (max-width: 959px) {
+  .banner {
+    height: 72vh;
+  }
+
+  .textContainer h2 {
+    font-size: 3.5em;
+  }
+
+  .textContainer p {
+    margin-top: 15px;
+    font-size: 1.9em;
+  }
+
+  .textContainer button {
+    border-radius: 20px;
+    padding: 10px 18px;
+    font-size: 1.4em;
+  }
+}
+
+/* Small devices (tablets) */
+@media only screen and (min-width: 600px) and (max-width: 739px) {
+  /* Styles for small devices go here */
+  .banner {
+    height: calc(100vh - 80px);
+  }
+
+  .textContainer h2 {
+    font-size: 3.2em;
+  }
+
+  .textContainer p {
+    margin-top: 14px;
+    font-size: 1.6em;
+  }
+
+  .textContainer button {
+    border-radius: 20px;
+    padding: 8px 15px;
+    font-size: 1.3em;
+  }
+}
+
+@media only screen and (max-width: 599px) {
+  /* Styles for extra small devices go here */
+  .banner {
+    height: 62vh;
+  }
+
+  .textContainer {
+    width: 100%;
+    height: 200px;
+    z-index: 99;
+  }
+
+  .textContainer h2 {
+    font-size: 2.5em;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+  }
+
+  .textContainer p {
+    font-size: 1.4em;
+    margin-top: 10px;
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.45);
+  }
+
+  .textContainer button {
+    border-radius: 20px;
+    padding: 9px 18px;
+    font-size: 1.3em;
+  }
+
+  .carouselImage {
+    object-fit: cover;
+  }
+}

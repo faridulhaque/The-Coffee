@@ -1,6 +1,12 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
+import Banner from "./Banner";
+import Items from "./Items";
+import About from "./About";
+import Menu from "./Menu";
+import BaseBanner from "./BaseBanner";
+import BaseDetails from "./BaseDetails";
 
 function HomeContainer() {
   const [showScroll, setShowScroll] = useState(false);
@@ -26,12 +32,19 @@ function HomeContainer() {
     <main>
       <header>
         <Navbar></Navbar>
+        <Banner></Banner>
       </header>
-      <section></section>
+      <section>
+        <Items></Items>
+        <About></About>
+        <Menu></Menu>
+        <BaseBanner></BaseBanner>
+        <BaseDetails></BaseDetails>
+      </section>
       {/* footer tag's and the image inside it have styles in the global css file  */}
       <footer className="footer"></footer>
 
-      <span
+      {/* <span
         onClick={() => {
           window.scrollTo(0, 0);
         }}
@@ -51,7 +64,7 @@ function HomeContainer() {
             d="M4.5 12.75l7.5-7.5 7.5 7.5m-15 6l7.5-7.5 7.5 7.5"
           />
         </svg>
-      </span>
+      </span> */}
     </main>
   );
 }

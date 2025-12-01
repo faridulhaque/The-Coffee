@@ -1,19 +1,11 @@
 "use client";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { createContext } from "react";
+import { createContext, useEffect } from "react";
 import useToggleLanguage from "@/others/useToggleLanguage";
 import { TContext } from "@/others/types";
-
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 export const GlobalContext = createContext<TContext>({} as TContext);
 
@@ -28,6 +20,11 @@ export default function RootLayout({
     language: toggleLanguageData.language,
     toggleLanguage: toggleLanguageData.toggleLanguage,
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
   return (
     <html lang="en">
       <body>
